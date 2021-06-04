@@ -1,0 +1,31 @@
+
+{
+  "robot_01_resultCode": {
+      "name":"%E9%AB%98%E5%B0%8F%E8%89%B3%E7%9A%84robot",
+      "robotId":"5f91d051-cd7f-4385-abee-5a2c75c882f1",
+      "ip":"rpa-test.datagrand.com",
+      "protocol":"http",
+      "tenant":"0cc21ce8-f16c-11e9-9f12-0242ac120003",
+      "expect_result":"resultCode",
+      "status_code": 200
+  },
+  "robot_02_resultCode": {
+      "name":"%E9%AB%98%E5%B0%8F%E8%89%B3%E7%9A%84robot_edited",
+      "robotId":"5f91d051-cd7f-4385-abee-5a2c75c882f1",
+      "ip":"rpa-test.datagrand.com",
+      "protocol":"http",
+      "tenant":"0cc21ce8-f16c-11e9-9f12-0242ac120003",
+      "expect_result":"result",
+      "status_code": 200
+  },
+    "robot_03_resultCode": {
+      "name":"%E9%AB%98%E5%B0%8F%E8%89%B3%E7%9A%84robot#####",
+      "robotId":"5f91d051-cd7f-4385-abee-5a2c75c882f1",
+      "ip":"rpa-test.datagrand.com",
+      "protocol":"http",
+      "tenant":"0cc21ce8-f16c-11e9-9f12-0242ac120003",
+      "expect_result":"resultCode",
+      "status_code": 200
+  }
+}
+

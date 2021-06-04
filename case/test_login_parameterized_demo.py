@@ -11,9 +11,6 @@ print(data)
 
 class TestLogin(unittest.TestCase):
 
-
-
-
     @parameterized.expand([(2, 3, 5),(3, 5, 8)])
     def test_add(self,a, b, expected):
         self.assertEqual(a + b, expected)
