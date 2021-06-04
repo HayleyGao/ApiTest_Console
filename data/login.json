@@ -1,0 +1,17 @@
+
+{
+  "login_001": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "protocol":"http"
+  },
+  "login_002": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "protocol":"http"
+  }
+}
