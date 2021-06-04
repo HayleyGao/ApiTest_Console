@@ -20,7 +20,7 @@ class TestLogin(unittest.TestCase):
     def test_case_post_001(self,accountEmail,password,url,ip,protocol,expect_result,status_code):
         res=api_login.test_login(accountEmail,password,url,ip,protocol)
         #print(res.status_code)
-        #self.assertEqual(status_code,res.status_code)
+        self.assertEqual(status_code,res.status_code)
         self.assertIn(expect_result,res.text)
 
 
