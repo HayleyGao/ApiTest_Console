@@ -1,7 +1,7 @@
 import  unittest
 from  common.request import  Request
 import  json
-from api_page import api_apps,api_robots
+from api_page import api_robots
 from common.read_json import   ReadJson
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
 from common.getToken import GetToken
@@ -18,7 +18,8 @@ tenant="0cc21ce8-f16c-11e9-9f12-0242ac120003"  #达观数据租户
 # data_=ReadJson(filename=filename).read_json2_list()
 # print(data_)
 
-class TestApps(unittest.TestCase):
+
+class TestAccount(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.filename = filename
@@ -36,11 +37,6 @@ class TestApps(unittest.TestCase):
         res = api_robots.test_robot_put(name,robotId,self.ip,self.protocol,self.tenant,self.Authorization)
         self.assertEqual(status_code,res.status_code)
         self.assertIn(expect_result,res.text)
-
-
-
-
-
 
 
     @classmethod

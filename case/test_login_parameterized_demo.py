@@ -1,7 +1,7 @@
 import  unittest
 from  common.request import  Request
 import  json
-from api import api_login
+from api_page import api_login
 from common.read_json import   ReadJson
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
 
