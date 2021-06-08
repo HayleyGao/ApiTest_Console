@@ -1,7 +1,7 @@
 import  unittest
 from  common.request import  Request
 import  json
-from api_page.api_login import ApiLogin
+from api_page import api_login
 from common.read_json import   ReadJson
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
 from  common.readConfig import ReadCofig
@@ -33,10 +33,10 @@ class TestLogin(unittest.TestCase):
 
 
     @parameterized.expand(ReadJson(filename=filename).read_json2_list())
-    def test_case_post_001(self,accountEmail,password,url,domain,port,protocol,expect_result,status_code):
-        res=ApiLogin(protocol,domain,port).login_post(accountEmail,password,url)
+    def test_case_post_001(self,accountEmail,password,url,ip,port,protocol,expect_result,status_code):
+        res=api_login.test_login(accountEmail,password,url,ip,port,protocol)
         print(res.status_code)
-        # print(res.text)
+        print(res.text)
         self.assertEqual(status_code,res.status_code)
         self.assertIn(expect_result,res.text)
 

@@ -35,7 +35,7 @@ def test_robot_put(name,robotId,ip,protocol,tenant,Authorization):
     )
 
     headers={
-        "Content-Type": data.content_type,
+        # "Content-Type": data.content_type,
         "Accept": "application/json, text/plain, */*",
         "Accept-Encoding": "gzip, deflate",
         "Host": ip,
@@ -46,7 +46,13 @@ def test_robot_put(name,robotId,ip,protocol,tenant,Authorization):
         "X-Tenant":tenant
     }
 
-    url = protocol + "://" + ip + '/v2/robots/' + robotId
+    if version=='':
+        # url = f"{protocol}://{ip}:{port}/{version}{base_url}"
+        url = f"{protocol}://{ip}:{port}/{base_url}"
+    else:
+        url = f"{protocol}://{ip}:{port}/{version}/{base_url}"
+
+    #url = protocol + "://" + ip + '/v2/robots/' + robotId
     res=requests.put(url=url,data=data,headers=headers)
     return res
 
@@ -56,13 +62,18 @@ if __name__ == '__main__':
     robotId="5f91d051-cd7f-4385-abee-5a2c75c882f1"
 
     ip= "rpa-test.datagrand.com"
+    port=80
+    version='v1'
+    base_url='robot/view/getRobots'
     protocol='http'
     tenant="0cc21ce8-f16c-11e9-9f12-0242ac120003"
 
-    accountEmail = "gaoxiaoyan%40datagrand.com"
-    password = "b29a8e35a7eeb51fd42c6abfb93597d9"
+    # accountEmail = "gaoxiaoyan%40datagrand.com"
+    # password = "b29a8e35a7eeb51fd42c6abfb93597d9"
+    accountEmail = "gaoxiaoyan@datagrand.com"
+    password = "Gaoxiaoyan9533"
 
-    Authorization = GetToken(accountEmail, password, ip, protocol).getToken()
+    Authorization = GetToken(accountEmail,password,ip,port,protocol,version,base_url).getToken()
 
     res=test_robot_put(name,robotId,ip,protocol,tenant,Authorization)
 

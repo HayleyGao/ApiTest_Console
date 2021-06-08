@@ -8,10 +8,10 @@ import json
 参考至：
 https://www.cnblogs.com/yuerbaobao/p/14645003.html
 """
+#"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes"
+#http://rpa-test.datagrand.com:80/token?_allow_anonymous=true&selfHandled=yes
 
-
-
-def test_login(accountEmail,password,base_url,ip,port,protocol):
+def test_login(accountEmail,password,version,base_url,ip,port,protocol):
     data = MultipartEncoder(
         {
             "accountEmail": accountEmail,
@@ -29,7 +29,11 @@ def test_login(accountEmail,password,base_url,ip,port,protocol):
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
         "X-Referer": "Console"
     }
-    url=f"{protocol}://{ip}:{port}/{base_url}"
+    if version=='':
+        # url = f"{protocol}://{ip}:{port}/{version}{base_url}"
+        url = f"{protocol}://{ip}:{port}/{base_url}"
+    else:
+        url = f"{protocol}://{ip}:{port}/{version}/{base_url}"
     res=requests.post(url=url,headers=headers,data=data)
     return res
 
@@ -43,7 +47,10 @@ if __name__ == '__main__':
     ip= "rpa-test.datagrand.com"
     port=80
     protocol='http'
-    res=test_login(accountEmail,password,base_url,ip,port,protocol)
+    # version=None,和''还是不同的。
+    version=''
+    # version='v2'
+    res=test_login(accountEmail,password,version,base_url,ip,port,protocol)
     print(res.status_code)
     print(res.text)
     print(res.request.url)
