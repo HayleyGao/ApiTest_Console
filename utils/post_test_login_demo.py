@@ -13,8 +13,10 @@ https://www.cnblogs.com/yuerbaobao/p/14645003.html
 def test():
     data = MultipartEncoder(
         {
-            "accountEmail": "gaoxiaoyan%40datagrand.com",
-            "password": "b29a8e35a7eeb51fd42c6abfb93597d9"
+            # "accountEmail": "gaoxiaoyan%40datagrand.com",
+            # "password": "b29a8e35a7eeb51fd42c6abfb93597d9"
+            "accountEmail": "gaoxiaoyan@datagrand.com",
+            "password": "Gaoxiaoyan9533"
         }
     )
 
@@ -31,7 +33,7 @@ def test():
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
         "X-Referer": "Console"
     }
-    res=requests.post(url="http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",data=data,headers=headers)
+    res=requests.post(url="http://rpa-test.datagrand.com/token?_allow_anonymous=true&selfHandled=yes",data=data,headers=headers)
     print(res.status_code)
     print(res.request.body)
     print(res.text)

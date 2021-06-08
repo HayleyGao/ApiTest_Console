@@ -1,0 +1,77 @@
+
+{
+  "login_01_resultCode": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "resultCode",
+      "status_code":200
+
+  },
+  "login_02_tenant": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "tenant",
+      "status_code":200
+
+  },
+  "login_03_token": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "token",
+      "status_code":200
+  },
+  "login_04_user": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "user",
+      "status_code":200
+  },
+
+  "login_05_password_null": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "resultMsg",
+      "status_code":400
+  },
+  "login_06_password_wrong": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"123456",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "resultMsg",
+      "status_code":400
+  },
+  "login_07_password_wrong": {
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"123456",
+      "url":"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes",
+      "ip":"rpa-test.datagrand.com",
+      "port": 80,
+      "protocol":"http",
+      "expect_result": "resultMsg2",
+      "status_code":403
+  }
+}
+

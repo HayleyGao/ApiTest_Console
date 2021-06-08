@@ -9,6 +9,7 @@ from common.getToken import GetToken
 filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/robot.json"
 
 ip = "rpa-test.datagrand.com"
+port=80
 protocol = 'http'
 accountEmail = "gaoxiaoyan%40datagrand.com"
 password = "b29a8e35a7eeb51fd42c6abfb93597d9"
@@ -23,11 +24,12 @@ class TestAccount(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.filename = filename
         cls.ip=ip
+        cls.port=port
         cls.protocol=protocol
         cls.accountEmail=accountEmail
         cls.password=password
         cls.tenant=tenant
-        cls.Authorization=GetToken(accountEmail, password, ip, protocol).getToken()
+        cls.Authorization=GetToken(accountEmail, password, ip, port,protocol).getToken()
         print("测试开始...")
 
 
