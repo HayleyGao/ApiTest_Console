@@ -41,7 +41,6 @@ class AppsApi:
         :param perPage:
         :return:
         """
-
         headers=self.headers
         url=f"{self.url_}/{base_url}"
         params = {"page": page, "perPage": perPage}
@@ -52,9 +51,12 @@ class AppsApi:
 
 
 
+
+
 if __name__ == '__main__':
     protocol = 'http'
-    domain= "rpa-test.datagrand.com"
+    # domain= "rpa-test.datagrand.com"
+    domain="rpa-v11.datagrand.com"
     port = 80
     tenant="0cc21ce8-f16c-11e9-9f12-0242ac120003"
 
@@ -63,19 +65,22 @@ if __name__ == '__main__':
     accountEmail = "gaoxiaoyan@datagrand.com"
     password = "Gaoxiaoyan9533"
 
-    base_url_ = "token?_allow_anonymous=true&selfHandled=yes"
+    base_url_ = "v2/token?_allow_anonymous=true&selfHandled=yes"
     Authorization = GetToken(accountEmail=accountEmail, password=password, domain=domain, protocol=protocol,port=port,base_url=base_url_).getToken()
 
-    base_url = "protected/v1/app/view/queryApps"
+    # base_url = "protected/v1/app/view/queryApps"
+    base_url="v2/front/apps"
 
     #case01
     res=AppsApi(protocol,domain,port,Authorization,tenant).apps_get(base_url,page=0,perPage=10)
     print(res.status_code)
     print(res.text)
+    print(res.request.url)
     #case02
     res_ = AppsApi(protocol, domain, port, Authorization, tenant).apps_get(base_url, page='', perPage='')
     print(res_.status_code)
     print(res_.text)
+    print(res_.request.url)
 
 
 

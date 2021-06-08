@@ -45,40 +45,19 @@ class ApiLogin:
 
 
 if __name__ == '__main__':
+    filename="/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.ini"
+    conf=ReadCofig(filename).readConfig()
+    print(conf.options("environment_v11"))
 
-    filename="/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.json"
-    data = ReadJson(filename).read_json()
-    #print(type(data),data)
+    protocol=conf.get("environment_v11","protocol")
+    domain=conf.get("environment_v11", "domain")
+    port=conf.get("environment_v11", "port")
+    accountEmail=conf.get("environment_v11", "protocol")
+    password=conf.get("environment_v11", "protocol")
 
-    protocol=data["environment"]["v11"]["protocol"]
-    domain = data["environment"]["v11"]["domain"]
-    port = data["environment"]["v11"]["port"]
-    accountEmail = data["environment"]["v11"]["accountInfo"]["accountEmail"]
-    password = data["environment"]["v11"]["accountInfo"]["password"]
-    tenant = data["environment"]["v11"]["accountInfo"]["tenant"]
+    base_url = "token?_allow_anonymous=true&selfHandled=yes"
 
 
-    #test_v2环境
-    # protocol = data["environment"]["test"]["v2"]["protocol"]
-    # domain = data["environment"]["test"]["v2"]["domain"]
-    # port = data["environment"]["test"]["v2"]["port"]
-    # accountEmail = data["environment"]["test"]["v2"]["accountInfo"]["accountEmail"]
-    # password = data["environment"]["test"]["v2"]["accountInfo"]["password"]
-    # tenant = data["environment"]["test"]["v2"]["accountInfo"]["tenant"]
-    #
-    # print(protocol,domain,port,accountEmail,password,tenant)
-
-    #test_v1环境
-    # protocol = data["environment"]["test"]["v1"]["protocol"]
-    # domain = data["environment"]["test"]["v1"]["domain"]
-    # port = data["environment"]["test"]["v1"]["port"]
-    # accountEmail = data["environment"]["test"]["v1"]["accountInfo"]["accountEmail"]
-    # password = data["environment"]["test"]["v1"]["accountInfo"]["password"]
-    # tenant = data["environment"]["test"]["v1"]["accountInfo"]["tenant"]
-
-    print(protocol,domain,port,accountEmail,password,tenant)
-
-    base_url="v2/token?_allow_anonymous=true&selfHandled=yes"
     res=ApiLogin(protocol,domain,port).login_post(accountEmail,password,base_url)
     print(res.status_code)
     print(res.text)

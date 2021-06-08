@@ -17,8 +17,32 @@ import os
 # print("data_",data_)
 
 
-filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login.json"
-# filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login_v2.json"
+filename_ = "/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.json"
+data = ReadJson(filename_).read_json()
+# print(type(data),data)
+
+#v11环境
+# protocol = data["environment"]["v11"]["protocol"]
+# domain = data["environment"]["v11"]["domain"]
+# port = data["environment"]["v11"]["port"]
+# accountEmail = data["environment"]["v11"]["accountInfo"]["accountEmail"]
+# password = data["environment"]["v11"]["accountInfo"]["password"]
+# tenant = data["environment"]["v11"]["accountInfo"]["tenant"]
+
+
+
+#test_v2环境
+protocol = data["environment"]["test"]["v2"]["protocol"]
+domain = data["environment"]["test"]["v2"]["domain"]
+port = data["environment"]["test"]["v2"]["port"]
+accountEmail = data["environment"]["test"]["v2"]["accountInfo"]["accountEmail"]
+password = data["environment"]["test"]["v2"]["accountInfo"]["password"]
+tenant = data["environment"]["test"]["v2"]["accountInfo"]["tenant"]
+
+print(protocol, domain, port, accountEmail, password, tenant)
+
+
+filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login_v11.json"
 
 
 
@@ -29,14 +53,20 @@ class TestLogin(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.filename=filename
+        cls.protocol=protocol
+        cls.domain=domain
+        cls.port=port
+        cls.accountEmail=accountEmail
+        cls.password=password
+        cls.tenant=tenant
         print("测试开始...")
 
 
     @parameterized.expand(ReadJson(filename=filename).read_json2_list())
-    def test_case_post_001(self,accountEmail,password,url,domain,port,protocol,expect_result,status_code):
-        res=ApiLogin(protocol,domain,port).login_post(accountEmail,password,url)
+    def test_case_post_001(self,accountEmail,password,base_url,expect_result,status_code):
+        res=ApiLogin(self.protocol,self.domain,self.port).login_post(accountEmail,password,base_url)
         print(res.status_code)
-        # print(res.text)
+        print(res.request.url)
         self.assertEqual(status_code,res.status_code)
         self.assertIn(expect_result,res.text)
 
