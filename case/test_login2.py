@@ -11,11 +11,22 @@ from common.getData import getData
 
 top_dir=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 configFile=os.path.join(top_dir,"config","config.json")
-# print("configFile",configFile)
+print("configFile",configFile)
+
 data=getData(configFile,"v11")
 
-filename=os.path.join(top_dir,"data","login_v11.json")
-# print("filename",filename)
+protocol=data["protocol"]
+domain=data["domain"]
+port=data["port"]
+accountEmail=data["accountEmail"]
+password=data["password"]
+tenant=data["tenant"]
+
+# print(protocol, domain, port, accountEmail, password, tenant)
+
+filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login_v11.json"
+
+
 
 
 
@@ -26,12 +37,12 @@ class TestLogin(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.filename=filename
-        cls.protocol=data["protocol"]
-        cls.domain=data["domain"]
-        cls.port=data["port"]
-        cls.accountEmail=data["accountEmail"]
-        cls.password=data["password"]
-        cls.tenant=data["tenant"]
+        cls.protocol=protocol
+        cls.domain=domain
+        cls.port=port
+        cls.accountEmail=accountEmail
+        cls.password=password
+        cls.tenant=tenant
         print("测试开始...")
 
 

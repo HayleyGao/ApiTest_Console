@@ -9,8 +9,7 @@ from common.read_json import  ReadJson
 参考至：
 https://www.cnblogs.com/yuerbaobao/p/14645003.html
 """
-#"http://rpa-test.datagrand.com/v2/token?_allow_anonymous=true&selfHandled=yes"
-#http://rpa-test.datagrand.com:80/token?_allow_anonymous=true&selfHandled=yes
+
 
 
 class ApiLogin:
