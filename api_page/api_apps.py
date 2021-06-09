@@ -1,6 +1,8 @@
 import  requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 import json
+import os
+from common.getData import getData
 from common.getToken import  GetToken
 #Authorization = GetToken(accountEmail, password, ip, protocol).getToken()
 
@@ -47,40 +49,79 @@ class AppsApi:
         res=requests.get(url=url,headers=headers,params=params)
         return res
 
+    def versions_get(self,base_url,page,perPage):
+        """
+        查询某个流程的所有版本
+        :param page:
+        :param perPage:
+        :return:
+        """
+        headers=self.headers
+        url=f"{self.url_}/{base_url}"
+        params = {"page": page, "perPage": perPage}
+        res=requests.get(url=url,headers=headers,params=params)
+        return res
 
 
+
+    def app_search_get(self,base_url,appName,page,perPage):
+        """
+        根据流程名称搜索
+        :return:
+        """
+        headers = self.headers
+        url = f"{self.url_}/{base_url}"
+        params = {"appName": appName, "page": page, "perPage": perPage}
+        res = requests.get(url=url, headers=headers, params=params)
+        return res
 
 
 
 
 if __name__ == '__main__':
-    protocol = 'http'
-    # domain= "rpa-test.datagrand.com"
-    domain="rpa-v11.datagrand.com"
-    port = 80
-    tenant="0cc21ce8-f16c-11e9-9f12-0242ac120003"
+    top_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    configFile = os.path.join(top_dir, "config", "config.json")
+    # print("configFile",configFile)
+    data = getData(configFile, "v11")
+    # print(data)
 
-    # accountEmail = "gaoxiaoyan%40datagrand.com"
-    # password = "b29a8e35a7eeb51fd42c6abfb93597d9"
-    accountEmail = "gaoxiaoyan@datagrand.com"
-    password = "Gaoxiaoyan9533"
+    # 获取配置文件内的参数
+    protocol = data["protocol"]
+    domain = data["domain"]
+    port = data["port"]
+    accountEmail = data["accountEmail"]
+    password = data["password"]
+    tenant = data["tenant"]
+    base_url_login = data["base_url_login"]
 
-    base_url_ = "v2/token?_allow_anonymous=true&selfHandled=yes"
-    Authorization = GetToken(accountEmail=accountEmail, password=password, domain=domain, protocol=protocol,port=port,base_url=base_url_).getToken()
+    Authorization = GetToken(accountEmail, password, domain, port, protocol, base_url_login).getToken()
+    print('Authorization',Authorization)
 
-    # base_url = "protected/v1/app/view/queryApps"
     base_url="v2/front/apps"
-
     #case01
     res=AppsApi(protocol,domain,port,Authorization,tenant).apps_get(base_url,page=0,perPage=10)
     print(res.status_code)
-    print(res.text)
-    print(res.request.url)
-    #case02
-    res_ = AppsApi(protocol, domain, port, Authorization, tenant).apps_get(base_url, page='', perPage='')
-    print(res_.status_code)
-    print(res_.text)
-    print(res_.request.url)
+    #print(res.text)
+    # print(res.request.url)
+    # print(res.request.headers)
+
+    appId="ecc7921d-9720-4a25-80f2-49630dd40ed5"
+    base_url_versions=f"v2/front/apps/{appId}/versions"
+    res_versions = AppsApi(protocol, domain, port, Authorization, tenant).apps_get(base_url=base_url_versions, page=0, perPage=10)
+    print(res_versions.status_code)
+    print(res_versions.request.url)
+    print(res_versions.request.headers)
+
+    base_url_search="v2/front/apps"
+    appName = "args"
+    res_search = AppsApi(protocol, domain, port, Authorization, tenant).app_search_get(base_url=base_url_versions,appName = "args", page=0,
+                                                                                   perPage=10)
+    print(res_search.status_code)
+    print(res_search.request.url)
+    print(res_search.request.headers)
+
+
+
 
 
 

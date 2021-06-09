@@ -36,9 +36,9 @@ class ReadJson:
 
 
 if __name__ == '__main__':
-    # filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login.json"
+    filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/login_v11.json"
     # filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/robot.json"
-    filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.json"
+    #filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.json"
 
     data=ReadJson(filename).read_json()
     print(data)

@@ -15,6 +15,9 @@ def getData(filename,env):
         accountEmail = data["environment"]["v11"]["accountInfo"]["accountEmail"]
         password = data["environment"]["v11"]["accountInfo"]["password"]
         tenant = data["environment"]["v11"]["accountInfo"]["tenant"]
+        base_url_login = data["environment"]["v11"]["base_url_login"]
+
+
 
     else:
         #test环境,env="v2/v1"
@@ -24,9 +27,11 @@ def getData(filename,env):
         accountEmail = data["environment"]["test"][env]["accountInfo"]["accountEmail"]
         password = data["environment"]["test"][env]["accountInfo"]["password"]
         tenant = data["environment"]["test"][env]["accountInfo"]["tenant"]
+        base_url_login = data["environment"]["test"][env]["base_url_login"]
+
 
     dict = {"protocol": protocol, "domain": domain, "port": port, "accountEmail": accountEmail, "password": password,
-            "tenant": tenant}
+            "tenant": tenant,"base_url_login":base_url_login}
     return dict
 
 if __name__ == '__main__':

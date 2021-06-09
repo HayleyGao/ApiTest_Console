@@ -4,13 +4,11 @@ import  json
 from api_page.api_login import ApiLogin
 from common.read_json import   ReadJson
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
+import os
+from common.getData import getData
 
-accountEmail = "gaoxiaoyan@datagrand.com"
-password = "Gaoxiaoyan9533"
-base_url = "token?_allow_anonymous=true&selfHandled=yes"
-domain = "rpa-test.datagrand.com"
-port = 80
-protocol = 'http'
+
+
 
 
 class GetToken:
@@ -42,8 +40,24 @@ class GetToken:
 
 
 if __name__ == '__main__':
-   token= GetToken(accountEmail,password,domain,port,protocol,base_url).getToken()
-   print(token)
+    top_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    configFile = os.path.join(top_dir, "config", "config.json")
+    # print("configFile",configFile)
+    data = getData(configFile, "v11")
+    #print(data)
+
+    #获取配置文件内的参数
+    protocol = data["protocol"]
+    domain = data["domain"]
+    port = data["port"]
+    accountEmail = data["accountEmail"]
+    password = data["password"]
+    tenant = data["tenant"]
+    base_url_login=data["base_url_login"]
+
+
+    token= GetToken(accountEmail,password,domain,port,protocol,base_url_login).getToken()
+    print(token)
 
 
 
