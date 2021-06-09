@@ -1,27 +1,21 @@
 
 {
   "login_01_resultCode": {
-      "accountEmail":"gaoxiaoyan@datagrand.com",
-      "password":"Gaoxiaoyan9533",
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
       "base_url":"v2/token?_allow_anonymous=true&selfHandled=yes",
       "expect_result": "resultCode",
       "status_code":200
   },
   "login_02_tenant": {
-      "accountEmail":"gaoxiaoyan@datagrand.com",
-      "password":"Gaoxiaoyan9533",
+      "accountEmail":"gaoxiaoyan%40datagrand.com",
+      "password":"b29a8e35a7eeb51fd42c6abfb93597d9",
       "base_url":"v2/token?_allow_anonymous=true&selfHandled=yes",
       "expect_result": "tenant",
       "status_code":200
 
-  },
-  "login_03_token": {
-      "accountEmail":"gaoxiaoyan@datagrand.com",
-      "password":"Gaoxiaoyan9533",
-      "base_url":"v2/token?_allow_anonymous=true&selfHandled=yes",
-      "expect_result": "token",
-      "status_code":200
   }
+
 
 }
 
