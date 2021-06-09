@@ -17,8 +17,6 @@ def getData(filename,env):
         tenant = data["environment"]["v11"]["accountInfo"]["tenant"]
         base_url_login = data["environment"]["v11"]["base_url_login"]
 
-
-
     else:
         #test环境,env="v2/v1"
         protocol = data["environment"]["test"][env]["protocol"]
