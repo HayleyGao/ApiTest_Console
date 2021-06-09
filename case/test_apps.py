@@ -51,7 +51,9 @@ class TestRobot(unittest.TestCase):
 
     def test_apps_get(self):
         base_url="v2/front/apps"
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url, page=0, perPage=10)
+        page=0
+        perPage=10
+        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url, page=page, perPage=perPage)
         # print(self.Authorization)
         print(res.status_code)
         self.assertEqual(200,res.status_code)
@@ -60,19 +62,22 @@ class TestRobot(unittest.TestCase):
     def test_versions_get(self):
         appId = "ecc7921d-9720-4a25-80f2-49630dd40ed5"
         base_url_versions = f"v2/front/apps/{appId}/versions"
+        page = 0
+        perPage = 10
         res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url_versions,
-                                                                                       page=0, perPage=10)
+                                                                                       page=page, perPage=perPage)
         print(res.status_code)
         print(res.request.url)
-        # print(res.request.headers)
         self.assertEqual(200, res.status_code)
 
     def test_search_get(self):
         base_url_search = "v2/front/apps"
         appName = "args"
+        page = 0
+        perPage = 10
         res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).app_search_get(base_url=base_url_search,
-                                                                                           appName=appName, page=0,
-                                                                                           perPage=10)
+                                                                                           appName=appName, page=page,
+                                                                                           perPage=perPage)
         print(res.status_code)
         print(res.request.url)
         self.assertEqual(200, res.status_code)
