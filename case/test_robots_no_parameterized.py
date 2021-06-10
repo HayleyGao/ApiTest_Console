@@ -69,6 +69,17 @@ class TestRobot(unittest.TestCase):
         print(res.request.url)
         self.assertEqual(200, res.status_code)
 
+    def test_robots_put_v2(self):
+        robotId = "a56e0a6b-1e27-42c1-9ca3-f6162eb23177"
+        base_url = f"v2/robots/{robotId}"
+        #base_url = "v2/robots/robotId"
+        name = "robot_caiwenjie_PC_updated"
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_put(base_url=base_url,robotId=robotId,name=name)
+        # print(res.status_code)
+        print(res.request.url)
+        print(res.text)
+        self.assertEqual(200, res.status_code)
+
 
     @classmethod
     def tearDownClass(cls):
@@ -77,6 +88,7 @@ class TestRobot(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 
 
 

@@ -63,8 +63,8 @@ class TestRobot(unittest.TestCase):
 
     @parameterized.expand(robots_put_params)
     def test_robots_put(self,base_url,robotId,name,expect_result,status_code):
-
-        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_put(base_url=base_url,robotId=robotId,name=name)
+        base_url_=f"{base_url}{robotId}"
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_put(base_url=base_url_,robotId=robotId,name=name)
         # print(res.status_code)
         print(res.request.url)
         self.assertEqual(status_code, res.status_code)
