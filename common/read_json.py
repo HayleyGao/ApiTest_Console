@@ -32,6 +32,23 @@ class ReadJson:
         return list
 
 
+    def dict_to_parameterized(self,dict):
+        """
+        字典格式转换为parameterized可以使用的[(),(),()]格式。
+        :param key:
+        :return:
+        """
+        parameterized = []
+        for li in dict:
+            dict_ = dict[li]
+            list_value = []
+            for k, v in dict_.items():
+                list_value.append(v)
+            parameterized.append(tuple(list_value))
+        return parameterized
+
+
+
 
 
 
@@ -40,12 +57,37 @@ if __name__ == '__main__':
     # filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/robot.json"
     #filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/config/config.json"
 
-    data=ReadJson(filename).read_json()
-    print(data)
+    # print("-------------------------")
+    # data2=ReadJson(filename).read_json2_list()
+    # print(data2)
 
-    print("-------------------------")
-    data2=ReadJson(filename).read_json2_list()
-    print(data2)
+    filename="/Users/hayleygao/PycharmProjects/ApiTest_Console/data/apps.json"
+    data=ReadJson(filename).read_json()
+    #print(data)
+    print("===================")
+    apps_dict=data["apps"]
+    #print(apps_dict)
+    apps=ReadJson(filename).dict_to_parameterized(apps_dict)
+    print(apps)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

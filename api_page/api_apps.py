@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
     base_url_search="v2/front/apps"
     appName = "args"
-    res_search = AppsApi(protocol, domain, port, Authorization, tenant).app_search_get(base_url=base_url_versions,appName = "args", page=0,
+    res_search = AppsApi(protocol, domain, port, Authorization, tenant).app_search_get(base_url=base_url_search,appName = "args", page=0,
                                                                                    perPage=10)
     print(res_search.status_code)
     print(res_search.request.url)

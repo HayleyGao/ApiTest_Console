@@ -1,9 +1,56 @@
 
 {
-  "apps_01_resultCode": {
+  "apps": {
+    "apps_01_resultCode": {
       "base_url":"v2/front/apps",
+      "page": 0,
+      "perPage": 10,
       "expect_result": "resultCode",
       "status_code":200
+    },
+    "apps_02_resultCode": {
+      "base_url":"v2/front/apps",
+      "page": 0,
+      "perPage": 10,
+      "expect_result": "total",
+      "status_code":200
+    }
+  },
+  "versions": {
+    "versions_01_resultCode": {
+      "appId":"ecc7921d-9720-4a25-80f2-49630dd40ed5",
+      "base_url":"v2/front/apps/{appId}/versions",
+      "page": 0,
+      "perPage": 10,
+      "expect_result": "resultCode",
+      "status_code":200
+    },
+    "versions_02_resultCode": {
+      "appId":"ecc7921d-9720-4a25-80f2-49630dd40ed5",
+      "base_url":"v2/front/apps/{appId}/versions",
+      "page": 0,
+      "perPage": 10,
+      "expect_result": "versionAmount",
+      "status_code":200
+    }
+  },
+  "search": {
+    "search_01_resultCode": {
+      "base_url":"v2/front/apps",
+      "appName": "args",
+      "page": 0,
+      "perPage": 10,
+      "expect_result": "resultCode",
+      "status_code":200
+    },
+    "search_02_resultCode": {
+        "base_url":"v2/front/apps",
+        "appName": "demo",
+        "page": 0,
+        "perPage": 10,
+        "expect_result": "items",
+        "status_code":200
+    }
   }
 
 

@@ -3,7 +3,7 @@ from  common.request import  Request
 import  json
 from api_page.api_apps import AppsApi
 
-from common.read_json import   ReadJson #read_json,dict_to_parameterized
+from common.read_json import   ReadJson
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
 from common.getToken import GetToken
 import os
@@ -18,21 +18,18 @@ data = getData(configFile, "v11")
 # print(data)
 
 # 获取配置文件内的参数
+# protocol = data["protocol"]
+# domain = data["domain"]
+# port = data["port"]
+# accountEmail = data["accountEmail"]
+# password = data["password"]
+# tenant = data["tenant"]
+# base_url_login = data["base_url_login"]
 
 
 #获取数据文件
 filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/apps.json"
 # print("filename",filename)
-#获取同一模块的不同接口的参数化数据
-case_data=ReadJson(filename).read_json()
-apps=case_data["apps"]
-versions=case_data["versions"]
-search=case_data["search"]
-
-apps_params=ReadJson(filename).dict_to_parameterized(apps)
-versions_params=ReadJson(filename).dict_to_parameterized(versions)
-search_params=ReadJson(filename).dict_to_parameterized(search)
-
 
 
 class TestRobot(unittest.TestCase):
@@ -51,32 +48,40 @@ class TestRobot(unittest.TestCase):
         print("测试开始...")
 
 
-    @parameterized.expand(apps_params)
-    def test_apps_get(self,base_url,page,perPage,expect_result,status_code):
+
+    def test_apps_get(self):
+        base_url="v2/front/apps"
+        page=0
+        perPage=10
         res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url, page=page, perPage=perPage)
         # print(self.Authorization)
-        #print(res.status_code)
-        print(res.request.url)
-        self.assertEqual(status_code,res.status_code)
-        self.assertIn(expect_result,res.text)
+        print(res.status_code)
+        self.assertEqual(200,res.status_code)
 
 
-    @parameterized.expand(versions_params)
-    def test_versions_get(self,appId,base_url,page,perPage,expect_result,status_code):
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).versions_get(base_url=base_url, page=page, perPage=perPage)
-        # print(res.status_code)
-        print(res.request.url)
-        self.assertEqual(status_code, res.status_code)
-        self.assertIn(expect_result, res.text)
-
-    @parameterized.expand(search_params)
-    def test_search_get(self,base_url,appName,page,perPage,expect_result,status_code):
-        print(appName,base_url,page,perPage,expect_result,status_code)
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).app_search_get(base_url=base_url,appName=appName, page=page,perPage=perPage)
+    def test_versions_get(self):
+        appId = "ecc7921d-9720-4a25-80f2-49630dd40ed5"
+        base_url_versions = f"v2/front/apps/{appId}/versions"
+        page = 0
+        perPage = 10
+        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url_versions,
+                                                                                       page=page, perPage=perPage)
         print(res.status_code)
         print(res.request.url)
-        self.assertEqual(status_code, res.status_code)
-        self.assertIn(expect_result, res.text)
+        self.assertEqual(200, res.status_code)
+
+    def test_search_get(self):
+        base_url_search = "v2/front/apps"
+        appName = "args"
+        page = 0
+        perPage = 10
+        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).app_search_get(base_url=base_url_search,
+                                                                                           appName=appName, page=page,
+                                                                                           perPage=perPage)
+        print(res.status_code)
+        print(res.request.url)
+        self.assertEqual(200, res.status_code)
+
 
 
     @classmethod
