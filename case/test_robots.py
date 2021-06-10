@@ -1,7 +1,7 @@
 import  unittest
 from  common.request import  Request
 import  json
-from api_page.api_apps import AppsApi
+from api_page.api_robots import RobotsApi
 
 from common.read_json import   ReadJson #read_json,dict_to_parameterized
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
@@ -21,17 +21,17 @@ data = getData(configFile, "v11")
 
 
 #获取数据文件
-filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/apps.json"
+filename = "/Users/hayleygao/PycharmProjects/ApiTest_Console/data/robots.json"
 # print("filename",filename)
 #获取同一模块的不同接口的参数化数据
 case_data=ReadJson(filename).read_json()
-apps=case_data["apps"]
-versions=case_data["versions"]
-search=case_data["search"]
 
-apps_params=ReadJson(filename).dict_to_parameterized(apps)
-versions_params=ReadJson(filename).dict_to_parameterized(versions)
-search_params=ReadJson(filename).dict_to_parameterized(search)
+robots=case_data["robots"]
+robots_put=case_data["robots_put"]
+
+#转换为(parameterized)参数化格式
+robots_params=ReadJson(filename).dict_to_parameterized(robots)
+robots_put_params=ReadJson(filename).dict_to_parameterized(robots_put)
 
 
 
@@ -51,9 +51,9 @@ class TestRobot(unittest.TestCase):
         print("测试开始...")
 
 
-    @parameterized.expand(apps_params)
-    def test_apps_get(self,base_url,page,perPage,expect_result,status_code):
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url, page=page, perPage=perPage)
+    @parameterized.expand(robots_params)
+    def test_robots_get(self,base_url,page,perPage,expect_result,status_code):
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_get(base_url=base_url, page=page, perPage=perPage)
         # print(self.Authorization)
         #print(res.status_code)
         print(res.request.url)
@@ -61,20 +61,11 @@ class TestRobot(unittest.TestCase):
         self.assertIn(expect_result,res.text)
 
 
-    @parameterized.expand(versions_params)
-    def test_versions_get(self,appId,base_url,page,perPage,expect_result,status_code):
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).versions_get(base_url=base_url, page=page, perPage=perPage)
-        # print(res.status_code)
-        print(res.request.url)
-        print(res.text)
-        self.assertEqual(status_code, res.status_code)
-        self.assertIn(expect_result, res.text)
+    @parameterized.expand(robots_put_params)
+    def test_robots_put(self,base_url,robotId,name,expect_result,status_code):
 
-    @parameterized.expand(search_params)
-    def test_search_get(self,base_url,appName,page,perPage,expect_result,status_code):
-        print(appName,base_url,page,perPage,expect_result,status_code)
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).app_search_get(base_url=base_url,appName=appName, page=page,perPage=perPage)
-        print(res.status_code)
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_put(base_url=base_url,robotId=robotId,name=name)
+        # print(res.status_code)
         print(res.request.url)
         self.assertEqual(status_code, res.status_code)
         self.assertIn(expect_result, res.text)

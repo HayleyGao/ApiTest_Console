@@ -1,7 +1,7 @@
 import  unittest
 from  common.request import  Request
 import  json
-from api_page.api_apps import AppsApi
+from api_page.api_robots import RobotsApi
 
 from common.read_json import   ReadJson #read_json,dict_to_parameterized
 from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
@@ -51,33 +51,23 @@ class TestRobot(unittest.TestCase):
         print("测试开始...")
 
 
-    @parameterized.expand(apps_params)
-    def test_apps_get(self,base_url,page,perPage,expect_result,status_code):
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).apps_get(base_url=base_url, page=page, perPage=perPage)
-        # print(self.Authorization)
-        #print(res.status_code)
+    def test_robots_get(self):
+        base_url = "v2/robots"
+        page = 0
+        perPage = 10
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_get(base_url=base_url, page=page, perPage=perPage)
         print(res.request.url)
-        self.assertEqual(status_code,res.status_code)
-        self.assertIn(expect_result,res.text)
+        self.assertEqual(200,res.status_code)
 
 
-    @parameterized.expand(versions_params)
-    def test_versions_get(self,appId,base_url,page,perPage,expect_result,status_code):
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).versions_get(base_url=base_url, page=page, perPage=perPage)
+    def test_robots_put(self):
+        robotId = "a56e0a6b-1e27-42c1-9ca3-f6162eb23177"
+        base_url = f"v2/robots/{robotId}"
+        name = "robot_caiwenjie_PC_updated"
+        res = RobotsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).robots_put(base_url=base_url,robotId=robotId,name=name)
         # print(res.status_code)
         print(res.request.url)
-        print(res.text)
-        self.assertEqual(status_code, res.status_code)
-        self.assertIn(expect_result, res.text)
-
-    @parameterized.expand(search_params)
-    def test_search_get(self,base_url,appName,page,perPage,expect_result,status_code):
-        print(appName,base_url,page,perPage,expect_result,status_code)
-        res = AppsApi(self.protocol, self.domain, self.port, self.Authorization, self.tenant).app_search_get(base_url=base_url,appName=appName, page=page,perPage=perPage)
-        print(res.status_code)
-        print(res.request.url)
-        self.assertEqual(status_code, res.status_code)
-        self.assertIn(expect_result, res.text)
+        self.assertEqual(200, res.status_code)
 
 
     @classmethod
