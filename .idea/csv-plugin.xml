@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\api_page\api_userManage.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\case\test_login.py">
           <value>
             <Attribute>
