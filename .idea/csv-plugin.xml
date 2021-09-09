@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\case\test_login.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\common\getToken.py">
           <value>
             <Attribute>

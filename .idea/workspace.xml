@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login_parameterized_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -456,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631181190157</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update case.test_login">
+      <created>1631182269870</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1631182269870</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -575,7 +581,8 @@
     <MESSAGE value="重新整理，进行参数设置，方便切换不同环境，数据和代码分离。" />
     <MESSAGE value="add requirements.txt" />
     <MESSAGE value="update api_page.api_login&#10;update common.getToken" />
-    <option name="LAST_COMMIT_MESSAGE" value="update api_page.api_login&#10;update common.getToken" />
+    <MESSAGE value="update case.test_login" />
+    <option name="LAST_COMMIT_MESSAGE" value="update case.test_login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

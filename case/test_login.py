@@ -1,12 +1,6 @@
 import  unittest
-from  common.request import  Request
-import  json
 from api_page.api_login import ApiLogin
-from common.read_json import   ReadJson
-from parameterized import parameterized  #作参数化 比ddt更加直观的一种方法
-from  common.readConfig import ReadCofig
-import os
-from common.getData import getData
+
 
 
 data={
