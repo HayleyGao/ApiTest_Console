@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_page/api_userManage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/test_login_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/test_userManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +34,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -471,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631185599855</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update api_page.userManage,get,post method.">
+      <created>1631188098388</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1631188098388</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -591,7 +603,8 @@
     <MESSAGE value="add requirements.txt" />
     <MESSAGE value="update api_page.api_login&#10;update common.getToken" />
     <MESSAGE value="update case.test_login" />
-    <option name="LAST_COMMIT_MESSAGE" value="update case.test_login" />
+    <MESSAGE value="update api_page.userManage,get,post method." />
+    <option name="LAST_COMMIT_MESSAGE" value="update api_page.userManage,get,post method." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

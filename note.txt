@@ -1,0 +1,18 @@
+# -*- coding:uft-8 -*-
+
+今天在编写api_page的时候，想到了两种编写接口测试框架的方式：
+方式一：
+    按照现有的方式，以pageObject的方式，针对页面，有针对性的进行接口的编写。
+
+方式二：
+    按照最开始的方式，在excel上写好/完善好接口测试用例，分别从protocol、ip、port、apiVerson、base_url,params,headers,data，method 分别设定好，
+    然后，在代码中，依次读取excel获取参数，使用requests.request方法进行发送请求。
+
+方式一、方式二的对比：
+一个是通过pageObject思想，减少了大批幅的excel用例编写，也可以说是替代了excel大篇幅的用例。
+
+方式一相对比起来，可以更专注的在ddt或者case的数据驱动方面（而方式二，因为数据值的变化导致用例设计增加很多）。
+方式二想对比起来，在操作headers和params的参数内容更方便些（方式一的headers和params的参数值容易写死，目前的思维是这样的，后边或许有觉悟的时候。）。
+
+
+
