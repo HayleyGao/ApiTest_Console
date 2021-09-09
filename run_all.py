@@ -22,3 +22,5 @@ if __name__ == '__main__':
     with open(resport_file, 'wb') as f:
         runner = HTMLTestRunner(f, verbosity=2, title='console_api_test')  # 执行并生成测试报告
         runner.run(discover)
+
+
