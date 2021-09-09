@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -483,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631188098388</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update note.txt">
+      <created>1631188775489</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1631188775489</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -604,7 +608,8 @@
     <MESSAGE value="update api_page.api_login&#10;update common.getToken" />
     <MESSAGE value="update case.test_login" />
     <MESSAGE value="update api_page.userManage,get,post method." />
-    <option name="LAST_COMMIT_MESSAGE" value="update api_page.userManage,get,post method." />
+    <MESSAGE value="update note.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update note.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
