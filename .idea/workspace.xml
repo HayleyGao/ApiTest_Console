@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_page/api_login_.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ApiTest_Console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ApiTest_Console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page/api_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_page/api_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/getToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/getToken.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_login_parameterized_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +153,7 @@
       <recent name="$PROJECT_DIR$/api_page" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.getToken">
+  <component name="RunManager" selected="Python tests.Unittests in test_login.py">
     <configuration name="api_login" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,7 +238,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_apps.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_login.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -251,17 +248,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_apps.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_login.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python.getToken" />
         <item itemvalue="Python.api_login" />
         <item itemvalue="Python.api_login_" />
         <item itemvalue="Python.run_all" />
-        <item itemvalue="Python tests.Unittests in test_apps.py" />
       </list>
     </recent_temporary>
   </component>
@@ -445,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631176017983</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add requirements.txt">
+      <created>1631181068240</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1631181068240</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update api_page.api_login&#10;update common.getToken">
+      <created>1631181190157</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1631181190157</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -563,7 +574,8 @@
     <MESSAGE value="不同环境的切换如v2,配置文件的添加，日志文件的添加。" />
     <MESSAGE value="重新整理，进行参数设置，方便切换不同环境，数据和代码分离。" />
     <MESSAGE value="add requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add requirements.txt" />
+    <MESSAGE value="update api_page.api_login&#10;update common.getToken" />
+    <option name="LAST_COMMIT_MESSAGE" value="update api_page.api_login&#10;update common.getToken" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

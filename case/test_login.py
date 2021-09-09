@@ -9,14 +9,17 @@ import os
 from common.getData import getData
 
 
-top_dir=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-configFile=os.path.join(top_dir,"config","config.json")
-# print("configFile",configFile)
-data=getData(configFile,"v11")
+data={
+    "protocol" : "http",
+    "domain" : 'rpa-test.datagrand.com',
+    "port" : 80,
+    "apiVersion" : 'v2',
+    "accountEmail" : 'gaoxiaoyan@datagrand.com',
+    "password" : 'b29a8e35a7eeb51fd42c6abfb93597d9',
 
-filename=os.path.join(top_dir,"data","login_v11.json")
-# print("filename",filename)
-
+    "base_url" : "token",
+    "params" : {"_allow_anonymous": "true", "selfHandled": "yes"}
+}
 
 
 class TestLogin(unittest.TestCase):
@@ -25,23 +28,21 @@ class TestLogin(unittest.TestCase):
     """
     @classmethod
     def setUpClass(cls) -> None:
-        cls.filename=filename
+
         cls.protocol=data["protocol"]
         cls.domain=data["domain"]
         cls.port=data["port"]
+        cls.apiVersion=data["apiVersion"]
         cls.accountEmail=data["accountEmail"]
         cls.password=data["password"]
-        cls.tenant=data["tenant"]
+        cls.base_url=data["base_url"]
+        cls.params=data["params"]
         print("测试开始...")
 
-
-    @parameterized.expand(ReadJson(filename=filename).read_json2_list())
-    def test_case_post_001(self,accountEmail,password,base_url,expect_result,status_code):
-        res=ApiLogin(self.protocol,self.domain,self.port).login_post(accountEmail,password,base_url)
-        print(res.status_code)
-        print(res.request.url)
-        self.assertEqual(status_code,res.status_code)
-        self.assertIn(expect_result,res.text)
+    def test_login_post(self):
+        res=ApiLogin( self.protocol,self.domain,self.port,self.apiVersion).login_post(self.accountEmail, self.password,
+                                                                                      self.base_url,self.params)
+        self.assertEqual(res.status_code,200)
 
 
 
