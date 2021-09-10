@@ -5,7 +5,6 @@ from  common.getToken import GetToken
 import  json
 import  requests
 
-
 data={
     "protocol" : "http",
     "ip" : 'rpa-test.datagrand.com',
@@ -33,13 +32,11 @@ class TestLogin(unittest.TestCase):
         cls.password=data["password"]
         cls.base_url=data["base_url"]
         cls.params=data["params"]
-
         cls.url_=f"{cls.protocol}://{cls.ip}:{cls.port}/{cls.apiVersion}"
         res=ApiLogin( cls.protocol,cls.ip,cls.port,cls.apiVersion).login_post(cls.accountEmail, cls.password,
-                                                                              cls.base_url,cls.params)
+                                                                           cls.base_url,cls.params)
         cls.token = GetToken().getToken_simple(res)
         cls.tenant=data["tenant"]
-
         cls.headers = {
             'Authorization': cls.token,
             'X-Tenant': cls.tenant,
@@ -48,44 +45,31 @@ class TestLogin(unittest.TestCase):
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/93.0.4577.63 Safari/537.36',
             'Accept': 'application/json, text/plain, */*',
-
         }
-
         print("测试开始...")
 
-
-
-    def test_add_account_get(self):
+    def test_calendar_get(self):
         params={
             'page':0,
-            'perPage':999
+            'perPage':10,
+            'selfHandled':'yes'
         }
-        base_url='roles'
+        base_url='calendars'
         url=f"{self.url_}/{base_url}"
         response=requests.get(url=url,params=params,headers=self.headers)
         print(response.text)
         self.assertEqual(response.status_code,200)
 
-
-    def test_add_account_post(self):
+    def test_calendar_post(self):
         params={
             'keep':'yes'
         }
-        data={
-            "accountEmail":"day0910@13.23",
-            "accountName":"day0910",
-            "roleIds":["6afbfe62-e133-41fa-9564-5b6f67fa06e5"]
-        }
-        base_url='accounts'
+        base_url='calendars'
         url=f"{self.url_}/{base_url}"
-
-        response=requests.post(url=url,params=params, headers=self.headers,data=json.dumps(data))
-        print('response.status_code',response.status_code)
-        print(response.url)
+        data = {"name":"carlendar_day091012","nonWorkingDays":[{"date":"2021-09-14"},{"date":"2021-09-23"}]}
+        response=requests.post(url=url,params=params,headers=self.headers,data=json.dumps(data))
         print(response.text)
         self.assertEqual(response.status_code,200)
-
-
 
     @classmethod
     def tearDownClass(cls) -> None:
