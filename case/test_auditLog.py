@@ -4,7 +4,7 @@ from api_page.api_userManage import ApiUserManage
 from common.getToken import GetToken
 import json
 import requests
-import  os
+import  logging
 
 data = {
     "protocol": "http",
@@ -79,6 +79,8 @@ class TestAuditLog(unittest.TestCase):
         response = requests.post(url=url, params=params, headers=self.headers,data=json.dumps(data_))
         #print(response.text)  #这里，是下载文件，这里获取到的是二进制。接口下载，需要另外保存内容到文件
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
     def test002_exportLogs_post(self):
         """
@@ -103,6 +105,8 @@ class TestAuditLog(unittest.TestCase):
             f.write(response.content)
 
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
 
 

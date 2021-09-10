@@ -3,6 +3,7 @@ from api_page.api_login import ApiLogin
 from common.getToken import GetToken
 import json
 import requests
+import  logging
 
 data = {
     "protocol": "http",
@@ -60,6 +61,8 @@ class TestCalendarManage(unittest.TestCase):
         response = requests.get(url=url, params=params, headers=self.headers)
         print(response.text)
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
     def test_calendar_post(self):
         params = {
@@ -71,6 +74,8 @@ class TestCalendarManage(unittest.TestCase):
         response = requests.post(url=url, params=params, headers=self.headers, data=json.dumps(data))
         print(response.text)
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
     @classmethod
     def tearDownClass(cls) -> None:

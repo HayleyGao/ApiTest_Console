@@ -2,6 +2,8 @@ import unittest
 from api_page.api_login import ApiLogin
 import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+import  logging
+
 
 data = {
     "protocol": "http",
@@ -62,6 +64,8 @@ class TestLogin(unittest.TestCase):
         print(response.url)
         print(response.text)
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
     def test01_login_post(self):
         url = f"{self.url_}/{self.base_url}"
@@ -86,6 +90,8 @@ class TestLogin(unittest.TestCase):
         print(response.url)
         print(response.text)
         self.assertEqual(response.status_code, 200)
+        logging.info(f"case:login:{response.url},method:{response.request.method},headers:{response.request.headers},body：{response.request.body}")
+
 
     @classmethod
     def tearDownClass(cls) -> None:

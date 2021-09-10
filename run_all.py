@@ -2,6 +2,8 @@ import unittest
 import os
 from HTMLTestRunner import HTMLTestRunner
 import time
+import  logging
+
 
 top_dir = os.path.dirname(os.path.abspath(__file__))
 # print(top_dir)
@@ -13,6 +15,13 @@ resport_file = os.path.join(top_dir, 'report', str(int(time.time())) + '_report.
 case_dir = os.path.join(top_dir, 'case')
 # case_dir="/Users/hayleygao/PycharmProjects/ApiTest_Console/case"
 print("case_dir", case_dir)
+
+
+#创建日志对象
+#存放日志的目录
+logs=r"C:\Users\caiwenjie\PycharmProjects\ApiTest_Console\logs"+os.sep+str(time.time())+".log"
+logging.basicConfig(filename=logs,level=logging.DEBUG,format='%(asctime)s-%(name)s-%(levelname)s-%(message)s')
+#默认的顺序：CRITICAL > ERROR > WARNING > INFO > DEBUG
 
 
 
