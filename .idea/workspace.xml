@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case/test_calendarManage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case/test_auditLog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_calendarManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_calendarManage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_userManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_userManage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +163,21 @@
       <recent name="$PROJECT_DIR$/case" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_login.py">
+  <component name="RunManager" selected="Python tests.Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post">
+    <configuration name="Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest_Console" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auditLog.TestAuditLog.test002_exportLogs_post&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test_login.TestLogin.test_login_post" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,7 +192,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_userManage.TestLogin.test_add_account_post" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_auditLog.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,21 +202,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_userManage.TestLogin.test_add_account_post&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_calendarManage.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest_Console" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_calendarManage.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_auditLog.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -236,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post" />
+        <item itemvalue="Python tests.Unittests in test_auditLog.py" />
         <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python tests.Unittests for test_login.TestLogin.test_login_post" />
         <item itemvalue="Python tests.Unittests in test_userManage.py" />
-        <item itemvalue="Python tests.Unittests for test_userManage.TestLogin.test_add_account_post" />
-        <item itemvalue="Python tests.Unittests in test_calendarManage.py" />
       </list>
     </recent_temporary>
   </component>
@@ -480,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631245607097</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update case dir.">
+      <created>1631259043510</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1631259043511</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -602,7 +609,8 @@
     <MESSAGE value="update case.test_login" />
     <MESSAGE value="update api_page.userManage,get,post method." />
     <MESSAGE value="update note.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="update note.txt" />
+    <MESSAGE value="update case dir." />
+    <option name="LAST_COMMIT_MESSAGE" value="update case dir." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
