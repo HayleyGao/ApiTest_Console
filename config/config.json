@@ -1,43 +1,11 @@
 {
-  "environment": {
-    "v11": {
-      "protocol": "http",
-      "domain": "rpa-v11.datagrand.com",
-      "port": 80,
-      "accountInfo": {
-        "accountEmail": "gaoxiaoyan%40datagrand.com",
-        "password" :"b29a8e35a7eeb51fd42c6abfb93597d9",
-        "tenant":"5a2ce286-3879-4d26-bd54-75f90d1c5360"
-      },
-      "base_url_login":"v2/token?_allow_anonymous=true&selfHandled=yes"
-    },
-    "test": {
-      "v1": {
-        "protocol": "http",
-        "domain": "rpa-test.datagrand.com",
-        "port": 80,
-        "accountInfo": {
-          "accountEmail": "gaoxiaoyan@datagrand.com",
-          "password" :"Gaoxiaoyan9533",
-          "tenant":"0cc21ce8-f16c-11e9-9f12-0242ac120003"
-        },
-         "base_url_login":"token?_allow_anonymous=true&selfHandled=yes"
+  "protocol": "http",
+  "ip": "rpa-test.datagrand.com",
+  "port": 80,
+  "apiVersion": "v2",
+  "accountEmail": "gaoxiaoyan@datagrand.com",
+  "password": "b29a8e35a7eeb51fd42c6abfb93597d9",
 
-      },
-      "v2": {
-        "protocol": "http",
-        "domain": "rpa-test.datagrand.com",
-        "port": 80,
-        "accountInfo": {
-          "accountEmail": "gaoxiaoyan%40datagrand.com",
-          "password" :"b29a8e35a7eeb51fd42c6abfb93597d9",
-          "tenant":"0cc21ce8-f16c-11e9-9f12-0242ac120003"
-        },
-        "base_url_login":"v2/token?_allow_anonymous=true&selfHandled=yes"
-
-      }
-
-    }
-
-  }
+  "base_url": "token",
+  "params": {"_allow_anonymous": "true", "selfHandled": "yes"}
 }

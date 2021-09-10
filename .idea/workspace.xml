@@ -3,11 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_page/api_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_page/api_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_auditLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_auditLog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_calendarManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_calendarManage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/test_userManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_userManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/getData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/logs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/logs_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/readConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/read_json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/request.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/apps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login_v11.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +174,7 @@
       <recent name="$PROJECT_DIR$/case" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_all">
+  <component name="RunManager" selected="Python tests.Unittests in test_login.py">
     <configuration name="run_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,10 +254,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python.run_all" />
         <item itemvalue="Python tests.Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post" />
         <item itemvalue="Python tests.Unittests in test_auditLog.py" />
-        <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python tests.Unittests for test_login.TestLogin.test_login_post" />
       </list>
     </recent_temporary>
@@ -522,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631263591650</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add logging.">
+      <created>1631265226477</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1631265226477</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -646,7 +664,8 @@
     <MESSAGE value="update note.txt" />
     <MESSAGE value="update case dir." />
     <MESSAGE value="update auditLog expert case." />
-    <option name="LAST_COMMIT_MESSAGE" value="update auditLog expert case." />
+    <MESSAGE value="add logging." />
+    <option name="LAST_COMMIT_MESSAGE" value="add logging." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

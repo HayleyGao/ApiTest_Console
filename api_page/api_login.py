@@ -1,8 +1,7 @@
 import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 import json
-from common.readConfig import ReadCofig
-from common.read_json import ReadJson
+
 
 """
 登录RPA console 中遇到的"content-type=form-data;boundary=..."问题。

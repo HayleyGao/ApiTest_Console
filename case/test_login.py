@@ -36,7 +36,7 @@ class TestLogin(unittest.TestCase):
         cls.url_ = f"{cls.protocol}://{cls.ip}:{cls.port}/{cls.apiVersion}"
         cls.headers = {
             'X-Referer': 'Console',
-            'Referer': "http://rpa-test.datagrand.com",
+            'Referer': f"{cls.protocol}://{cls.ip}",
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/93.0.4577.63 Safari/537.36',
             'Accept': 'application/json, text/plain, */*',
