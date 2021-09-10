@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/1623121721_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/1623121746_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/1631176378_report.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -506,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631261674762</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="update auditLog expert case.">
+      <created>1631262766650</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1631262766650</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
