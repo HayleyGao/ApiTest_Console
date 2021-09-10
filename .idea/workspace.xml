@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
+    <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="update headers-Referer.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page/api_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_page/api_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_auditLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_auditLog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_calendarManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_calendarManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_userManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_userManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/getData.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/logs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/logs_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/readConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/read_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/apps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login_v11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/getToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/getToken.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -540,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631265226477</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="update headers-Referer.">
+      <created>1631266262490</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1631266262490</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -665,7 +657,8 @@
     <MESSAGE value="update case dir." />
     <MESSAGE value="update auditLog expert case." />
     <MESSAGE value="add logging." />
-    <option name="LAST_COMMIT_MESSAGE" value="add logging." />
+    <MESSAGE value="update headers-Referer." />
+    <option name="LAST_COMMIT_MESSAGE" value="update headers-Referer." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
