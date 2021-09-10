@@ -3,24 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0427c105-aeb2-45e9-9e73-9e61cc6e8658" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page_backup/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page_backup/api_apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page_backup/api_login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page_backup/api_login_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_page_backup/api_userManage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_backup/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_backup/test_apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_backup/test_login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_backup/test_login_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_backup/test_userManage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/getData.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/getToken.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/logs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/logs_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/readConfig.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/read_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_backup/request.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/1623121721_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/1623121746_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/1631176378_report.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +161,28 @@
       <recent name="$PROJECT_DIR$/case" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post">
+  <component name="RunManager" selected="Python.run_all">
+    <configuration name="run_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest_Console" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_all.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Console" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,27 +239,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_userManage.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest_Console" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_userManage.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_all" />
         <item itemvalue="Python tests.Unittests for test_auditLog.TestAuditLog.test002_exportLogs_post" />
         <item itemvalue="Python tests.Unittests in test_auditLog.py" />
         <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python tests.Unittests for test_login.TestLogin.test_login_post" />
-        <item itemvalue="Python tests.Unittests in test_userManage.py" />
       </list>
     </recent_temporary>
   </component>
@@ -507,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631261352508</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="update auditLog expert case.">
+      <created>1631261674762</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1631261674762</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
